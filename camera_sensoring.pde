@@ -12,9 +12,9 @@ TSPS tspsReceiver;
 int lastDrawn = 0;
 
 String[] subject = { 
-  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"
+  "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
 };
-int s = int(random(11));
+int s = int(random(10));
 
 void setup() {
   size(1024, 768);
@@ -36,7 +36,7 @@ void draw() {
   if ( tspsReceiver.people.size() == 0 && millis() - lastDrawn > 3000 ) {
     background( 0 );
     textAlign( CENTER );
-    text( "I'm all alone again :(", width / 2, height / 2 );
+    text( "Welcome to BookQuest 1.0 \n Come to me and I will give you  the first combination to Start..", width / 2, height / 2 );
   };
 };
 
@@ -51,7 +51,7 @@ void personEntered( TSPSPerson p ) {
   textAlign( CENTER );
 
  // text( subject[s], width / 2, height / 2 );
-    text( subject[int(random(subject.length))], width / 2, height / 2 );
+    text( "This is your first digit, use it wisely\n" +  (subject[int(random(subject.length))]), width / 2, height / 2 );
 
 }
 
@@ -67,7 +67,7 @@ void personLeft( TSPSPerson p ) {
 
   // no one left :(
   if (numPeopleLeft == 0) {
-    text( "All alone again...", width / 2, height / 2 );
+    text( "Welcome to BookQuest 1.0 \n Come to me and I will give you the first combination to start..", width / 2, height / 2 );
   } 
   else {
     text( "See ya!\nGlad I've got "+ numPeopleLeft +" more friends to kick it with.", width / 2, height / 2 );
