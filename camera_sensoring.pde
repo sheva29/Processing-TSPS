@@ -51,7 +51,7 @@ void personEntered( TSPSPerson p ) {
   textAlign( CENTER );
 
  // text( subject[s], width / 2, height / 2 );
-    text( "Thissubject[int(random(subject.length))], width / 2, height / 2 );
+    text( subject[int(random(subject.length))], width / 2, height / 2 );
 
 }
 
