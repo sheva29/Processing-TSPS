@@ -36,7 +36,7 @@ void draw() {
   if ( tspsReceiver.people.size() == 0 && millis() - lastDrawn > 3000 ) {
     background( 0 );
     textAlign( CENTER );
-    text( "I'm all alone in this cruel world :(", width / 2, height / 2 );
+    text( "I'm all alone again :(", width / 2, height / 2 );
   };
 };
 
@@ -50,7 +50,9 @@ void personEntered( TSPSPerson p ) {
   fill( 255 );
   textAlign( CENTER );
 
-  text( subject[s], width / 2, height / 2 );
+ // text( subject[s], width / 2, height / 2 );
+    text( "Thissubject[int(random(subject.length))], width / 2, height / 2 );
+
 }
 
 void personUpdated( TSPSPerson p ) {
