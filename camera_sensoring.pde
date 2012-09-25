@@ -73,7 +73,7 @@ void personLeft( TSPSPerson p ) {
   
  
   else {
-    text( "See ya!\nGlad I've got "+ numPeopleLeft +" more friends to kick it with.", width / 2, height / 2 );
+    text( "Now, you can start your BookQuest!"+ numPeopleLeft +" journeys so far.", width / 2, height / 2 );
   }
   lastDrawn = millis();
 }
